@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+<body>
+
+<div class="header">
+    <span class="title">Menu</span>
+</div>
+
+<div class="content">
+    <div class="list-row selected">
+        <a href="/">
+        <div class="list-lt">
+            <div class="caption">Home</div>
+            <div class="sub">&nbsp;</div>
+        </div>
+		<div class="clear"></div>
+        </a>
+    </div>
+    <div class="list-row">
+        <a href="/config">
+        <div class="list-lt">
+            <div class="caption">Config</div>
+            <div class="sub">&nbsp;</div>
+        </div>
+        <div class="clear"></div>
+        </a>
+    </div>
+    <div class="list-row">
+        <a href="/sockets">
+        <div class="list-lt">
+            <div class="caption">Sockets</div>
+            <div class="sub">&nbsp;</div>
+        </div>
+        <div class="clear"></div>
+        </a>
+    </div>
+</div>    
+<div class="footer">
+    <div class="left">&nbsp;</div>
+    <div class="center" id="datetime"></div>
+</div>    
+
+</body>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/socket.io.js"></script>
+<script type="text/javascript" src="static/js/date-display.js"></script>
+</html>

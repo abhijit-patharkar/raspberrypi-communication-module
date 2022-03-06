@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="/css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+<body>
+
+	<div class="header">
+    	<span class="title">Network Configuration</span>
+	</div>
+	<div class="content">
+		<form id="network_form" action="network" method="post">
+            <div class="form-group">
+                <label class="caption required">Address</label>
+                <input type="text" class="form-control" name="address" value="{{config['address']}}">
+            </div>
+            <div class="form-group">
+                <label class="caption required">Netmask</label>
+                <input type="text" class="form-control" name="netmask" value="{{config['netmask']}}">
+            </div>
+			<div class="form-group">
+	            <label class="caption required">Gateway</label>
+	            <input type="text" class="form-control" name="gateway" value="{{config['gateway']}}">
+			</div>
+			<div class="form-group">
+	            <label class="caption">Additional DNS servers</label>
+	            <input type="text" class="form-control" name="dns_servers" value="{{config['dns_servers']}}">
+            </div>
+            <div class="form-group">
+                <label class="caption">Additional search domains</label>
+                <input type="text" class="form-control" name="search_domains" value="{{config['search_domains']}}">
+			</div>
+			<div class="form-group hide" id="err-div">
+				<label class="err">Please provide mandatory fields.</label>
+			</div>	
+			<div class="btn-row">
+				<button type="submit" class="btn btn-primary" id="saveBttn">Submit</button>
+			</div>	
+		</form>
+	</div>	
+	<div class="footer">
+		<div class="left">&nbsp;</div>
+    	<div class="center" id="datetime"></div>
+    	<div class="right"><a href="/menu" class="ftr-link">Menu<img src="img/gry-status.png"></a></div>
+	</div>
+
+</body>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/socket.io.js"></script>
+<script type="text/javascript" src="static/js/date-display.js"></script>
+</html>

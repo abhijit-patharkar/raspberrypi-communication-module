@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Socket Information</title>
+<link href="/css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+<body>
+	<div class="header">
+        <span class="title">Socket {{sid}}</span>
+        <input type="hidden" value="{{sid}}" id="sid" />
+	</div>
+	<div class="content">
+        <div class="dbbox-center">
+            <div class="lbl">Status</div>
+                <div class="status">
+                    <img id="status-img" src="">
+                </div>
+                <div class="lbl">Active Power</div>
+                <div class="val">
+                    <span id="ap"></span>
+                    <span class="unit">W</span>
+                </div>
+            </div>
+            
+            <div>
+                <div class="db-row">
+                    <div class="lbl">Frequency</div>
+                    <div id="f" class="val"></div>
+                </div>
+                <div class="db-row">
+                    <div class="lbl">Power Consumption</div>
+                    <div id="pc" class="val"></div>
+                </div>
+                <div class="db-row">
+                    <div class="lbl">Voltage</div>
+                    <div id="v" class="val"></div>
+                </div>
+                <div class="db-row">
+                    <div class="lbl">Current</div>
+                    <div id="c" class="val"></div>
+                </div>
+                <div class="db-row">
+                    <div class="lbl">Apparant Power</div>
+                    <div id="apw" class="val"></div>
+                </div>
+                <div class="db-row">
+                    <div class="lbl">Reactive Power</div>
+                    <div id="rp" class="val"></div>
+                </div>
+                <div class="db-row">
+                    <div class="lbl">Power Factor</div>
+                    <div id="pf" class="val"></div>
+                </div>
+            </div>
+	</div>	
+	<div class="footer">
+		<div class="left">&nbsp;</div>
+    	<div class="center" id="datetime"></div>
+    	<div class="right"><a href="/menu" class="ftr-link">Menu<img src="/img/gry-status.png"></a></div>
+	</div>
+
+</body>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/socket.io.js"></script>
+<script type="text/javascript" src="/static/js/date-display.js"></script>
+<script type="text/javascript" src="/static/js/socket-info.js"></script>
+</html>
